@@ -1,0 +1,11 @@
+<h2>Available cars</h2>
+<% @cars.each do |car| %>
+  <tr>
+    <td><%= car.name %></td>
+    <td><%= car.model %></td>
+    <td><%= car.year %></td>
+    <td><%= car.category %></td>
+    <td><%= car.address %></td>
+    <td><%= car.price %></td>
+  </tr>
+<% end %>
