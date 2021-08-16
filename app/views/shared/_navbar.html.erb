@@ -1,6 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-border">
   <div class="container">
-    <%= link_to cars_path do %>
+    <%= link_to root_path do %>
       <%= image_tag "logo.png", class: 'height-logo'  %>
       <% end %>
 
@@ -28,7 +28,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "btn-green thin" %>
           </li>
         <% end %>
       </ul>
