@@ -1,11 +1,30 @@
-<%= @car.name %>
+<div class="container">
+  <div class="row">
+    <div class="col-8 border-bottom mb-4">
+      <%# <%= cl_image_tag @car.photo.key, height: 300, crop: :fill %>
+      <h1 class="show-card p-4 mt-5"><%= @car.name%> <%= @car.model %></h1>
+      <div class="show-card">
+        <p><%= @car.address %></p>
+        <p><%= @car.year %></p>
+        <p><%= @car.category %></p>
+        <p><%= @car.price %></p>
+
+      </div>
+    </div>
+
+    <div class="col-4 mt-4 border-right">
+      <%= cl_image_tag @car.photo.key, class: 'car-photo negative-margin-right'%>
+      <div class="show-card p-5 mt-3 py-3">
+        <%= link_to "Book now", car_path(@car.id), class: 'btn-green' %>
+      </div>
+    </div>
+  </div>
 
 
-
-<%= link_to "book", car_path(@car.id) %>
-<%= link_to 'Back', cars_path, class: 'btn btn-secondary' %>
-<%= link_to 'Delete',
-            car_path(@car),
-            method: :delete,
-            class: 'btn btn-danger',
-            data: { confirm: 'Are you sure ?'} %>
+  <%= link_to 'Back', cars_path, class: 'btn btn-secondary' %>
+  <%= link_to 'Delete',
+              car_path(@car),
+              method: :delete,
+              class: 'btn btn-danger',
+              data: { confirm: 'Are you sure ?'} %>
+</div>
