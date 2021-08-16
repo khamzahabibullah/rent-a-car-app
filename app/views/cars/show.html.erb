@@ -4,9 +4,10 @@
   </div>
 </div>
 
-<%= link_to "book", car_path(@car.id), class: 'btn btn-primary'%>
 <%= link_to 'Back', cars_path, class: 'btn btn-secondary' %>
-<%= link_to 'Delete',
+<%= link_to 'Book', car_path(@car.id), class: 'btn btn-success'%>
+<%= link_to 'Edit', edit_car_path(@car.id), class: 'btn btn-primary'%>
+<%= link_to 'Delete', car_path(@car.id),
             method: :delete,
             class: 'btn btn-danger',
             data: { confirm: 'Are you sure ?'} %>
