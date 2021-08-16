@@ -1,27 +1,30 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1588614380309-1ad67bdd9625?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80);">
-  <div class="container">
-    <h1>Cars available for rent</h1>
-  </div>
-
-</div><div class="container">
-  <div class="cards">
-    <% @cars.each do |car| %>
-      <%= link_to car_path(car) do %>
-      <div class="card-trip">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= car.name %></h2>
-            <p>Model: <%= car.model %></p>
-            <p>Year: <%= car.year %></p>
-            <p>Category: <%= car.category %></p>
-            <p>Address: <%= car.address %></p>
-          </div>
-          <h2 class="card-trip-pricing"><%= car.price %> AED/day</h2>
-        </div>
-      </div>
-      <%end %>
-    <% end %>
-  </div>
-  <%= link_to 'Add new', new_car_path, class: 'btn btn-primary w-100 mt-2' %>
+<div class="auto-margin">
+<div class="auto-margin d-flex justify-content-around flex-wrap ">
+		<% @cars.each do |car| %>
+			<%= link_to car_path(car) do %>
+				<div class="full-car p-4 my-5 ">
+					<div class="d-flex align-items-end">
+						<h1 class="mr-3 p-3 no-decorations-car"><%= car.name %></h1>
+						<div class="photo-borders p-3">
+							<%= cl_image_tag car.photo.key, class: "car-photo"%>
+						</div>
+						<h4 class="ml-2 p-3 no-decorations-car">AED<%= car.price %></h4>
+					</div>
+					<div class="car-body"></div>
+					<div class="container">
+						<div class="d-flex justify-content-between">
+							<div class="ml-5 wheel p-3">
+								<p class="gray-color">Address:</p>
+								<p class="bigger-text"><%= car.address%></p>
+							</div>
+							<div class="mr-5 wheel p-3">
+								<p class="gray-color">Category:</p>
+								<p class="bigger-text"><%= car.category %></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% end %>
+		<% end %>
+</div>
 </div>

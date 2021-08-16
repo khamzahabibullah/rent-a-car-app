@@ -109,3 +109,12 @@ body {
 .red {
   background: red;
 }
+
+.diagonal-split-background {
+  background-color: #013a6b;
+  background-image: -webkit-linear-gradient(30deg, #013a6b 50%, #004e95 50%);
+}
+
+.h {
+  height: 100%;
+}
