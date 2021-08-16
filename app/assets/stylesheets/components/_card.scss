@@ -22,7 +22,6 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -48,7 +47,26 @@
 
 .home-cards {
   margin-top: 14px;
+  margin-bottom: 28px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
+  grid-gap: 82px;
+}
+
+.top-cards h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container p {
+  font-size: 18px;
+  color: #6c757d;
+  padding: 12px;
+}
+
+.card-trip h2 {
+  font-size: larger;
+  padding-bottom: 16px;
 }
