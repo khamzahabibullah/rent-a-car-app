@@ -1,13 +1,40 @@
 <div class="container">
-    <h1><%= @car.name %></h1>
-  <div class="cards">
+  <div class="d-flex justify-content-between my-4">
+  <div class="back-btn"><i class="fas fa-chevron-left"></i> <%= link_to 'Back', cars_path, class: 'no-decorations'%></div>
+  <div class="back-btn red">
+    <i class="fas fa-trash"></i>
+    <%= link_to 'Delete',
+                  car_path(@car),
+                  method: :delete,
+                  class: 'no-decorations',
+                  data: { confirm: 'Are you sure ?'} %>
   </div>
 </div>
+  <div class="row">
+    <div class="col-8 border-bottom mb-4">
+      <%# <%= cl_image_tag @car.photo.key, height: 300, crop: :fill %>
+      <div class="show-card my-5 py-3 title">
+        <h1><%= @car.name%> <%= @car.model %> <%= @car.year %></h1>
+      </div>
+      <div>
+        <div class="left-margin1 d-flex show-question mb-2"><span class="pt-2 mr-3 bigger-font"><i class="fas fa-car"></i> Where?</span><p class="show-info"><%= @car.address%></p></div>
 
-<%= link_to 'Back', cars_path, class: 'btn btn-secondary' %>
-<%= link_to 'Book', car_path(@car.id), class: 'btn btn-success'%>
-<%= link_to 'Edit', edit_car_path(@car.id), class: 'btn btn-primary'%>
-<%= link_to 'Delete', car_path(@car.id),
-            method: :delete,
-            class: 'btn btn-danger',
-            data: { confirm: 'Are you sure ?'} %>
+        <div class="left-margin2 d-flex show-question mb-2"><span class="pt-2 mr-3 bigger-font"><i class="fas fa-car"></i> What?</span><p class="show-info"><%= @car.category %></p></div>
+        <div class="left-margin3 d-flex show-question"><span class="pt-2 mr-3 bigger-font"><i class="fas fa-car"></i> Price:</span><p class="show-info">AED<%= @car.price %></p></div>
+      </div>
+      <div class="wacky-line wacky-rotation"></div>
+    </div>
+
+    <div class="col-4 mt-4 border-right border-left">
+      <%= cl_image_tag @car.photo.key, class: 'car-photo negative-margin-right'%>
+      <div class="show-card p-5 mt-3 py-3 color-beige">
+        <%= link_to "Book now", car_path(@car.id), class: 'btn-green btn-big' %>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+</div>
