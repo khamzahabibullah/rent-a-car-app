@@ -5,4 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
- Car.create!(name:"Nissan", model: "Patrol", category: "off-road", price: 1000, address: "Barsha", user_id: 1)
+Car.create!(name: "Nissan", model: "Patrol", category: "off-road", price: 1000, address: "Barsha", user_id: 1)

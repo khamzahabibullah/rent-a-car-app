@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background: #f5e4bc;
+}
+
+.container-custom {
+  margin: 0 120px !important;
+}

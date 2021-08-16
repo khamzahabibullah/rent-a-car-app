@@ -1,0 +1,19 @@
+.btn-green {
+  background: #00755d;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  &:hover {
+    background: #01886d;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.thin {
+  padding: 9px 24px;
+}
