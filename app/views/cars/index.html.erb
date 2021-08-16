@@ -1,11 +1,27 @@
-<h2>Available cars</h2>
-<% @cars.each do |car| %>
-  <tr>
-    <td><%= car.name %></td>
-    <td><%= car.model %></td>
-    <td><%= car.year %></td>
-    <td><%= car.category %></td>
-    <td><%= car.address %></td>
-    <td><%= car.price %></td>
-  </tr>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1588614380309-1ad67bdd9625?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80);">
+  <div class="container">
+    <h1>Cars available for rent</h1>
+  </div>
+
+</div><div class="container">
+  <div class="cards">
+    <% @cars.each do |car| %>
+      <%= link_to car_path(car) do %>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= car.name %></h2>
+            <p>Model: <%= car.model %></p>
+            <p>Year: <%= car.year %></p>
+            <p>Category: <%= car.category %></p>
+            <p>Address: <%= car.address %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= car.price %> AED/day</h2>
+        </div>
+      </div>
+      <%end %>
+    <% end %>
+  </div>
+  <%= link_to 'Add new', new_car_path, class: 'btn btn-primary w-100 mt-2' %>
+</div>
