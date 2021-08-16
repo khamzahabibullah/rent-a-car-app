@@ -1,0 +1,57 @@
+.car-body {
+  background: rgb(107, 107, 107);
+  height: 10px;
+}
+
+.full-car {
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0px 1px 10px rgb(184, 184, 184);
+}
+
+.full-car h1 {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.photo-borders {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.full-car h4 {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.wheel {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  color: white;
+  background: black;
+  width: 120px;
+}
+
+.gray-color {
+  color: rgb(211, 211, 211);
+}
+
+.auto-margin {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.bigger-text {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.no-decorations-car {
+  text-decoration: none;
+  color: black;
+}

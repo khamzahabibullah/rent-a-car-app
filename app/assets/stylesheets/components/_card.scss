@@ -1,7 +1,6 @@
 .card-trip {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-trip > img {
@@ -18,10 +17,9 @@
 
 .card-trip p {
   font-size: 12px;
-  opacity: .7;
+  opacity: 0.7;
   margin: 0;
 }
-
 
 .card-trip .card-trip-infos {
   padding: 16px;
@@ -38,10 +36,14 @@
   width: 40px;
 }
 
-
 .cards {
   margin-top: 14px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.card {
+  width: 24rem;
+  border-top: 1px dotted black;
 }
