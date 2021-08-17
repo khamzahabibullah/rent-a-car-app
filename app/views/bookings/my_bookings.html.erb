@@ -1,0 +1,22 @@
+<div class="container">
+
+  <h1 class="mt-4">My bookings</h1>
+  <div class="d-flex justify-content-around flex-wrap">
+    <% @bookings.each do |booking| %>
+      <%= link_to car_path(booking.car.id), class: 'booking-text' do%>
+        <div class="card-product my-4 booking-text">
+          <%= cl_image_tag booking.car.photo.key, class: 'car-photo' %>
+          <div class="card-product-infos">
+            <h2><%= booking.car.name %> <%= booking.car.model %> <%= booking.car.year %></h2>
+            <div>
+            <div class="d-flex show-question mb-2"><span class="pt-2 mr-3 bigger-font"><i class="fas fa-car"></i> Where?</span><p class="show-info"><%= booking.car.address%></p></div>
+
+            <div class="d-flex show-question mb-2"><span class="pt-2 mr-3 bigger-font"><i class="fas fa-car"></i> What?</span><p class="show-info"><%= booking.car.category %></p></div>
+            <div class="d-flex show-question"><span class="pt-2 mr-3 bigger-font"><i class="fas fa-car"></i> Price:</span><p class="show-info">AED<%= booking.car.price %></p></div>
+          </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
