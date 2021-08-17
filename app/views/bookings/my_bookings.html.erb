@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1 class="mt-4">My bookings</h1>
+  <h1 class="mt-4 text-center">My bookings</h1>
   <div class="d-flex justify-content-around flex-wrap">
     <% @bookings.each do |booking| %>
       <%= link_to car_path(booking.car.id), class: 'booking-text' do%>
