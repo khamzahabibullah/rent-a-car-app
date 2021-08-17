@@ -1,13 +1,27 @@
 <div class="container">
   <div class="d-flex justify-content-between my-4">
   <div class="back-btn"><i class="fas fa-chevron-left"></i> <%= link_to 'Back', cars_path, class: 'no-decorations'%></div>
-  <div class="back-btn red">
-    <i class="fas fa-trash"></i>
-    <%= link_to 'Delete',
-                  car_path(@car),
-                  method: :delete,
-                  class: 'no-decorations',
-                  data: { confirm: 'Are you sure ?'} %>
+  <div class="d-flex justify-content">
+    <% if policy(@car).edit? %>
+    <div class="back-btn blue">
+      <i class="fas fa-chevron-down"></i>
+        <%= link_to 'Edit',
+                    edit_car_path(@car),
+                    class: 'no-decorations'
+        %>
+    </div>
+    <% end %>
+    <% if policy(@car).destroy? %>
+    <div class="back-btn red">
+      <i class="fas fa-trash"></i>
+        <%= link_to 'Delete',
+                    car_path(@car),
+                    method: :delete,
+                    class: 'no-decorations',
+                    data: { confirm: 'Are you sure ?'}
+        %>
+    </div>
+    <% end %>
   </div>
 </div>
   <div class="row">
@@ -33,9 +47,6 @@
 
     </div>
   </div>
-
-
-
 
 </div>
 
