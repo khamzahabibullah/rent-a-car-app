@@ -7,7 +7,9 @@ skip_before_action :authenticate_user!, only: %i[ index show ]
     @markers = @cars.geocoded.map do |car|
       {
         lat: car.latitude,
-        lng: car.longitude
+        lng: car.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { car: car }),
+        image_url: helpers.asset_url('car.png')
       }
     end
   end
