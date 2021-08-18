@@ -1,4 +1,15 @@
+
+
 <div class="auto-margin">
+<button id="filter-button" class="btn-green mt-5 margin-left">Filters</button>
+<div class="d-none align-items-center mt-4 margin-left" id="filters">
+  <p class="m-0 mr-3">Filter by category:</p>
+  <%= form_for cars_path, method: :get do%>
+    <%= select_tag :category, options_for_select(Car::CATEGORIES) %>
+    <%= submit_tag 'Apply', class: 'btn-green py-1' %>
+  <% end %>
+  <%= link_to 'x Remove Filter', cars_path, class: 'btn btn-danger ml-3 py-1 rounded-border' %>
+</div>
 <div class="auto-margin d-flex justify-content-around flex-wrap ">
 		<% @cars.each do |car| %>
 			<%= link_to car_path(car) do %>
