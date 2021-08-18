@@ -41,8 +41,12 @@
 
     <div class="col-4 mt-4 border-right border-left">
       <%= cl_image_tag @car.photo.key, class: 'car-photo negative-margin-right'%>
-      <div class="show-card p-5 mt-3 py-3 color-beige">
-        <%= link_to "Book now", new_car_booking_path(@car.id), class: 'btn-green btn-big' %>
+      <div class="show-card p-5 mt-3 py-3 color-beige booking-text">
+        <%= simple_form_for [@car, @booking], data: { unavailable_dates: @car.unavailable_dates.to_json } do |f| %>
+          <%= f.input :starting_date, as: :string, input_html: {class: "datepicker"}%>
+          <%= f.input :ending_date, as: :string, input_html: {class: "datepicker"}%>
+          <%= f.submit "Book Now", class: "btn-green btn-big" %>
+        <% end %>
       </div>
 
     </div>
