@@ -22,10 +22,14 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+//import { toggleDateInputs } from "../components/booking";
+import { initMapbox } from "../components/map";
 import { filter } from "../components/filter";
+
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initMapbox();
   filter();
 });
