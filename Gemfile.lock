@@ -101,6 +101,7 @@ GEM
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.15.3)
+    filterrific (5.2.2)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     geocoder (1.6.7)
@@ -268,6 +269,7 @@ DEPENDENCIES
   cloudinary (~> 1.16.0)
   devise
   dotenv-rails
+  filterrific
   font-awesome-sass
   geocoder
   jbuilder (~> 2.7)
