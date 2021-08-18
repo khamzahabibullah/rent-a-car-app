@@ -1,8 +1,12 @@
 class CarsController < ApplicationController
-skip_before_action :authenticate_user!, only: %i[ index show ]
+  skip_before_action :authenticate_user!, only: %i[ index show ]
 
   def index
-    @cars = policy_scope(Car)
+    if params[:category].present?
+      @cars = policy_scope(Car).where(category: params[:category])
+    else
+      @cars = policy_scope(Car)
+    end
   end
 
   def show
@@ -55,5 +59,4 @@ skip_before_action :authenticate_user!, only: %i[ index show ]
   def car_params
     params.require(:car).permit(:name, :model, :address, :year, :category, :price, :photo)
   end
-
 end
