@@ -17,6 +17,10 @@
 body {
   background: #f1ede9;
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 
 .cursor {
@@ -99,7 +103,7 @@ body {
 
 .wacky-rotation {
   transform: rotate(0.1turn) translate(-80px, 100px);
-  width: 500px;
+  width: 700px;
 }
 
 .title {
@@ -124,12 +128,17 @@ body {
 }
 
 .booking-text {
-  color: black;
-  text-decoration: none;
+  color: black !important;
+  text-decoration: none !important;
   &:hover {
-    color: black;
-    text-decoration: none;
+    color: black !important;
+    text-decoration: none !important;
   }
+}
+
+.booking-text:hover {
+  color: black !important;
+  text-decoration: none !important;
 }
 
 .margin-left {
