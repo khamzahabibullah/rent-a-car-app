@@ -17,8 +17,9 @@
             <%= cl_image_tag car.photo.key, class: "car-photo"%>
             <div class="card-trip-infos text-left ">
               <div>
-                <h2><%= car.name %></h2>
-                <p><%= car.address%></p>
+                <h2><%= car.name %> <%= car.model %></h2>
+                <p><%= car.year %></p>
+                <p style="font-size: 16px"><%= car.address%></p>
               </div>
               <h2 class="card-trip-pricing">AED<%= car.price %> / Day</h2>
             </div>

@@ -20,6 +20,14 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
+
+    redirect_to my_bookings_path
+  end
+
   def my_bookings
     @bookings = Booking.where(user: current_user)
     authorize @bookings
