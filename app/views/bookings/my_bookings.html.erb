@@ -1,6 +1,4 @@
-
-
-<div class="container">
+<div class="container-fluid">
 <%= link_to '+ New Car', new_car_path, class: 'btn btn-green my-4' %>
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -11,9 +9,8 @@
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="d-flex justify-content-around flex-wrap ">
+    <div class="tab-pane fade show active mx-5" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="d-flex justify-content-around flex-wrap ">
       <% @bookings.each do |booking| %>
-
         <%= link_to car_path(booking.car.id), class: 'booking-text' do%>
           <div class="card-product my-4 booking-text ">
             <%= cl_image_tag booking.car.photo.key, class: 'car-photo' %>
@@ -31,7 +28,7 @@
       <% end %>
     </div>
     </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="tab-pane fade mx-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <div class="d-flex justify-content-around flex-wrap">
       <% current_user.cars.each do |car|%>
         <%= link_to car_path(car.id), class: 'booking-text' do%>
@@ -51,5 +48,36 @@
       <% end %>
     </div>
     </div>
+  </div>
+</div>
+
+
+
+<div class="footer">
+  <div class="container">
+    <div class="row align-items-center g-0 py-2">
+      <!-- Desc -->
+      <div class="col-md-6 col-12 text-left text-md-start">
+        <span>© 2021 Rent-a-Car Company
+        <hr>
+        Address: Businesss Bay, Dubai</span>
+      </div>
+       <!-- Links -->
+      <div class="col-12 col-md-6">
+        <nav class="nav nav-footer justify-content-center justify-content-md-end">
+          <a class="nav-link active ps-0" href="#">Privacy</a>
+          <a class="nav-link" href="#">Terms </a>
+          <a class="nav-link" href="#">Feedback</a>
+          <a class="nav-link" href="#">Support</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </div>

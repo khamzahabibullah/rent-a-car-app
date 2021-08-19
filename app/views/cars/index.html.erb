@@ -17,8 +17,9 @@
             <%= cl_image_tag car.photo.key, class: "car-photo"%>
             <div class="card-trip-infos text-left ">
               <div>
-                <h2><%= car.name %></h2>
-                <p><%= car.address%></p>
+                <h2><%= car.name %> <%= car.model %></h2>
+                <p><%= car.year %></p>
+                <p style="font-size: 16px"><%= car.address%></p>
               </div>
               <h2 class="card-trip-pricing">AED<%= car.price %> / Day</h2>
             </div>
@@ -34,5 +35,37 @@
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
+  </div>
+</div>
+
+
+
+
+<div class="footer">
+  <div class="container">
+    <div class="row align-items-center g-0 py-2">
+      <!-- Desc -->
+      <div class="col-md-6 col-12 text-left text-md-start">
+        <span>© 2021 Rent-a-Car Company
+        <hr>
+        Address: Businesss Bay, Dubai</span>
+      </div>
+       <!-- Links -->
+      <div class="col-12 col-md-6">
+        <nav class="nav nav-footer justify-content-center justify-content-md-end">
+          <a class="nav-link active ps-0" href="#">Privacy</a>
+          <a class="nav-link" href="#">Terms </a>
+          <a class="nav-link" href="#">Feedback</a>
+          <a class="nav-link" href="#">Support</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </div>

@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   get '/my_bookings', to: 'bookings#my_bookings', as: 'my_bookings'
+  resources :bookings, only: :destroy
 end
