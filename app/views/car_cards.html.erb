@@ -1,0 +1,28 @@
+<div class="auto-margin d-flex justify-content-around flex-wrap ">
+    <% @cars.each do |car| %>
+      <%= link_to car_path(car) do %>
+        <div class="full-car p-4 my-5 ">
+          <div class="d-flex align-items-end">
+            <h1 class="mr-3 p-3 no-decorations-car"><%= car.name %></h1>
+            <div class="photo-borders p-3">
+              <%= cl_image_tag car.photo.key, class: "car-photo"%>
+            </div>
+            <h4 class="ml-2 p-3 no-decorations-car">AED<%= car.price %></h4>
+          </div>
+          <div class="car-body"></div>
+            <div class="container">
+              <div class="d-flex justify-content-between">
+                <div class="ml-5 wheel p-3">
+                  <p class="gray-color">Address:</p>
+                  <p class="bigger-text"><%= car.address%></p>
+                </div>
+                <div class="mr-5 wheel p-3">
+                  <p class="gray-color">Category:</p>
+                  <p class="bigger-text"><%= car.category %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
