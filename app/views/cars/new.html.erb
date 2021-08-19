@@ -1,15 +1,18 @@
-<h1>New car to be added:</h1>
+<div class="container">
 
-<%= simple_form_for [@car] do |f| %>
-    <%= f.input :name %>
-    <%= f.input :model %>
-    <%= f.input :year %>
-    <%= f.input :category, collection: Car::CATEGORIES %>
-    <%= f.input :price %>
-    <%= f.input :address %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: "btn btn-primary w-100" %>
-  <% end %>
+  <h1>New car to be added:</h1>
+
+  <%= simple_form_for [@car] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :model %>
+      <%= f.input :year %>
+      <%= f.input :category, collection: Car::CATEGORIES %>
+      <%= f.input :price %>
+      <%= f.input :address %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, class: "btn-green w-100" %>
+    <% end %>
 
 
-<%= link_to 'Back', cars_path, class: 'btn btn-secondary' %>
+  <%= link_to 'Back', cars_path, class: 'btn btn-secondary mt-5' %>
+</div>
